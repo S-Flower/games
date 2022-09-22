@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>飞机大战</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background-color: rgb(83, 100, 120);
+      }
+      .playGame {
+        display: block;
+        position: relative;
+        width: 500px;
+        height: 670px;
+        margin: 50px auto;
+        background: url(./imgs/bg.jpg.png);
+      }
+      .introduce {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%, 0) scale(0.9);
+        width: 429px;
+        height: 189px;
+        background: url(./imgs/shoot_copyright.png);
+        /* transform: scale(0.9); */
+        animation: introduce 2s linear infinite;
+      }
+      @keyframes introduce {
+        50% {
+          transform: translate(-50%, 0) scale(1.2);
+        }
+        100% {
+          transform: translate(-50%, 0) scale(0.9);
+        }
+      }
+      .button {
+        position: absolute;
+        width: 108px;
+        height: 70px;
+        background: url(./imgs/button_normal.png);
+        line-height: 70px;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .gameBox {
+        display: none;
+        position: relative;
+        width: 500px;
+        height: 670px;
+        background-color: aqua;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      .bg {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+      }
+      .bg1 {
+        background: url("./imgs/bg.jpg.png");
+        animation: bg1Move 6s linear infinite;
+      }
+      .bg2 {
+        top: -670px;
+        background: url(./imgs/bg.jpg.png);
+        animation: bg2Move 6s linear infinite;
+      }
+      @keyframes bg1Move {
+        100% {
+          top: 670px;
+        }
+      }
+      @keyframes bg2Move {
+        100% {
+          top: 0px;
+        }
+      }
+      .active {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        position: relative;
+        width: 500px;
+        height: 670px;
+      }
+      .player {
+        position: absolute;
+        top: 560px;
+        left: 43%;
+        width: 70px;
+        height: 75px;
+        background: url(./imgs/hero1.png);
+        background-size: 100%;
+      }
+      .bullet {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 9px;
+        height: 21px;
+        background: url(./imgs/bullet2.png);
+      }
+      .bullet2 {
+        position: absolute;
+        width: 9px;
+        height: 21px;
+        background: url(./imgs/bullet1.png);
+      }
+      .bullet3 {
+        position: absolute;
+        width: 45px;
+        height: 21px;
+        background: url(./imgs/bullet1.png);
+      }
+      .enemy {
+        position: absolute;
+        top: -39px;
+      }
+      .enemy1 {
+        width: 51px;
+        height: 39px;
+        background: url(./imgs/enemy1.png);
+      }
+      .enemy2 {
+        top: -60px;
+        width: 69px;
+        height: 89px;
+        background: url(./imgs/enemy2.png);
+      }
+      .enemy3 {
+        top: -20px;
+        width: 165px;
+        height: 246px;
+        background: url(./imgs/enemy3_n1.png);
+      }
+      .playHp {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 100px;
+        height: 50px;
+        font-size: 30px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 游戏盒子 -->
+    <audio class="enemy_blowup" src="./audio/enemy_blowup.mp3"></audio>
+    <audio class="fire" src="./audio/fire.mp3"></audio>
+    <audio class="bgMusic" src="./audio/bg_music.mp3"></audio>
+    <audio class="hero_blowup" src="./audio/hero_blowup.mp3"></audio>
+    <audio class="bowbig" src="./audio/bowbig.wav"></audio>
+    <div class="playGame">
+      <div class="img">
+        <div class="introduce"></div>
+        <div class="button">开始游戏</div>
+      </div>
+    </div>
+    <div class="gameBox">
+      <div class="bg bg1"></div>
+      <div class="bg bg2"></div>
+      <!-- 游戏活动区域 -->
+      <div class="active">
+        <div class="playHp"></div>
+      </div>
+    </div>
+    <script src="./飞机大战.js"></script>
+  </body>
+</html>
+<!-- ♥♥♥ -->

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>超级玛丽(作者：学前端从小白到入土)</title>
+    <link rel="stylesheet" href="./maliao.css" />
+    <link rel="stylesheet" href="./animate.min.css" />
+    <link rel="shortcut icon" href="chaojimali.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- 音频 -->
+    <!-- <div class="audio">
+      <audio src="./images/180.mp3" controls loop autoplay></audio>
+    </div> -->
+    <!-- 头部 -->
+    <div class="head">
+      <div class="author">作者:学前端从小白到入土</div>
+      <div class="mark">分数：<span>0</span></div>
+      <div class="tips">A:向左,D:向右 J:跳跃 K:攻击(吃了星星才可以)</div>
+    </div>
+
+    <!-- 游戏界面 -->
+
+    <div class="gamebox">
+      <!-- 初始界面(开始游戏) -->
+      <div class="stargame">
+        <img src="./images/start.png" alt="" />
+        <span>开始游戏</span>
+      </div>
+      <!-- 地图 -->
+      <div class="map">
+        <!-- 背景地图 -->
+        <div class="movemap"></div>
+        <div class="moveend"></div>
+
+        <!-- 基线对齐 -->
+        <div class="bottombox">
+          <!-- 人物 -->
+          <div class="player" style="bottom: 0">
+            <!-- 技能 -->
+            <!-- <img class="attack" src="./images/fist_right.png" alt="" /> -->
+          </div>
+          <!-- 管道 -->
+          <div class="pipes">
+            <div class="pipe pipe1"></div>
+            <div class="pipe pipe2"></div>
+            <div class="pipe pipe3"></div>
+          </div>
+          <!-- 乌龟盒子 -->
+          <div class="tortoisebox">
+            <div class="tortoiser gui1 right" data-die="1"></div>
+            <div class="tortoiser gui2 left" data-die="1"></div>
+          </div>
+          <!-- 乌龟发射盒子 -->
+          <div class="launchT">
+            <!-- <div class="gui"></div> -->
+          </div>
+          <!-- 砖块 -->
+          <div class="brick">
+            <!-- <div class="prPo"></div> -->
+            <div class="item" data-num="3">
+              <img src="./images/qiang_1.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="./images/query1.png" alt="" />
+            </div>
+            <div class="item" data-num="2">
+              <img src="./images/qiang_1.png" alt="" />
+            </div>
+          </div>
+          <!-- 砖块墙 -->
+          <div class="brickWoll"></div>
+          <!-- 小星星 -->
+          <div class="star"></div>
+        </div>
+      </div>
+      <div class="buttomBiamge"></div>
+    </div>
+    <script src="./maliao.js"></script>
+  </body>
+</html>
